@@ -1,6 +1,13 @@
 const styles = {
-  toDoItemContent: {
-    marginLeft: '8px'
+  toDoItemContentIncomplete: {
+    marginLeft: '8px',
+    fontWeight: '500',
+  },
+  toDoItemContentComplete: {
+    marginLeft: '8px',
+    fontWeight: '500',
+    opacity: '.7',
+    textDecoration: 'line-through',
   },
   toDoItemIconIncomplete: {
     fontSize: '20px',

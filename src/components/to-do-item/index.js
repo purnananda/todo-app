@@ -20,7 +20,7 @@ const ToDoItem = ({ item, deleteToDo, handleCheck }) => {
         onCheckClick={() => handleCheck({ item })}
         isComplete={item.status}
       />
-      <span style={styles.toDoItemContent}>{item.title}</span>
+      <span style={item.status ? styles.toDoItemContentComplete : styles.toDoItemContentIncomplete}>{item.title}</span>
       <span
         style={styles.deleteButton}
         onClick={() => deleteToDo(item.id)}
