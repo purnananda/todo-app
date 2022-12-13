@@ -6,7 +6,7 @@ const CheckIcon = ({ isComplete, onCheckClick }) => {
     <i
       onClick={onCheckClick}
       style={
-        isComplete ? styles.toDoItemIconComplete : styles.toDoItemIconIncomplete
+        isComplete ? styles.toDoItemIconComplete : styles.toDoItemIconActive
       }
       className={isComplete ? 'fa fa-check-square-o' : 'fa fa-square-o'}
     ></i>
@@ -20,7 +20,7 @@ const ToDoItem = ({ item, deleteToDo, handleCheck }) => {
         onCheckClick={() => handleCheck({ item })}
         isComplete={item.status}
       />
-      <span style={item.status ? styles.toDoItemContentComplete : styles.toDoItemContentIncomplete}>{item.title}</span>
+      <span style={item.status ? styles.toDoItemContentComplete : styles.toDoItemContentActive}>{item.title}</span>
       <span
         style={styles.deleteButton}
         onClick={() => deleteToDo(item.id)}

@@ -1,5 +1,5 @@
 const styles = {
-  toDoItemContentIncomplete: {
+  toDoItemContentActive: {
     marginLeft: '8px',
     fontWeight: '500',
   },
@@ -9,7 +9,7 @@ const styles = {
     opacity: '.7',
     textDecoration: 'line-through',
   },
-  toDoItemIconIncomplete: {
+  toDoItemIconActive: {
     fontSize: '20px',
     color: 'gray',
     fontWeight: 'bold',

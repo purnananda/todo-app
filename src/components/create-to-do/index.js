@@ -3,7 +3,7 @@ import styles from './styles'
 
 const CreateToDo = ({ addToDo }) => {
   const [title, setTitle] = useState('')
-  const [status, setStatus] = useState('incomplete')
+  const [status, setStatus] = useState('active')
 
   const handleChange = (field, value) => {
     if (field === 'title') {
@@ -17,12 +17,12 @@ const CreateToDo = ({ addToDo }) => {
   const onAddTask = () => {
     addToDo({ title, status: status === 'complete' ? true : false })
     setTitle('')
-    setStatus('incomplete')
+    setStatus('active')
   }
 
   const onCanceTask = () => {
     setTitle('')
-    setStatus('incomplete')
+    setStatus('active')
   }
 
   return (
@@ -52,8 +52,8 @@ const CreateToDo = ({ addToDo }) => {
               value={status}
               onChange={evt => handleChange('status', evt.target.value)}
             >
-              <option value='incomplete'>Incomplete</option>
-              <option value='complete'>Complete</option>
+              <option value='active'>Active</option>
+              <option value='complete'>Completed</option>
             </select>
           </div>
         </div>
